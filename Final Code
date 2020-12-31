@@ -1,0 +1,23 @@
+#It is a leap year on every year that is: 
+#evenly divisible by 4 
+#**except** every year that is evenly divisible by 100 
+#**unless** the year is also evenly divisible by 400
+
+year = int(input("Which year do you want to check? "))
+
+year_modulo4 = year % 4
+year_modulo100 = year % 100
+year_modulo400 = year % 400
+
+if year_modulo4 == 0: 
+  #If the year is cleanly divisible by 4 then it will have a remainder (modulo) of 0
+  print("Leap year!")
+elif year_modulo100 == 0: 
+  #If the year is cleanly divisble by 100 then it will have a remainder of 0
+  print("Not a leap year.")
+elif year_modulo400 == 0:
+  #If the year is cleanly divisible by 400 then it will have a remainder of 0
+  print("Leap year!")
+else:
+  print("Not a leap year.")
+
